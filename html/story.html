@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IM+Fell+English:wght@400;700&family=Crimson+Pro:wght@400;700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="/css/shared.css">
+  
+  <link rel="stylesheet" href="/css/story.css">
+  
+  <title></title>
+</head>
+
+<body>
+  
+  <header>
+    <button onclick="showSideBar()">
+      <svg viewBox="0 -0.5 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+        <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+        <g id="SVGRepo_iconCarrier">
+          <path d="M6.5 11.75C6.08579 11.75 5.75 12.0858 5.75 12.5C5.75 12.9142 6.08579 13.25 6.5 13.25V11.75ZM18.5 13.25C18.9142 13.25 19.25 12.9142 19.25 12.5C19.25 12.0858 18.9142 11.75 18.5 11.75V13.25ZM6.5 15.75C6.08579 15.75 5.75 16.0858 5.75 16.5C5.75 16.9142 6.08579 17.25 6.5 17.25V15.75ZM18.5 17.25C18.9142 17.25 19.25 16.9142 19.25 16.5C19.25 16.0858 18.9142 15.75 18.5 15.75V17.25ZM6.5 7.75C6.08579 7.75 5.75 8.08579 5.75 8.5C5.75 8.91421 6.08579 9.25 6.5 9.25V7.75ZM18.5 9.25C18.9142 9.25 19.25 8.91421 19.25 8.5C19.25 8.08579 18.9142 7.75 18.5 7.75V9.25ZM6.5 13.25H18.5V11.75H6.5V13.25ZM6.5 17.25H18.5V15.75H6.5V17.25ZM6.5 9.25H18.5V7.75H6.5V9.25Z" fill="#000000"></path>
+        </g>
+      </svg>
+    </button>
+  </header>
+  
+  <aside inert>
+    <nav>
+      <div>
+        <button id="hide-aside" onclick="hideSideBar()">
+          <svg viewBox="6.67678 6.17678 11.64642 11.64642" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M6.96967 16.4697C6.67678 16.7626 6.67678 17.2374 6.96967 17.5303C7.26256 17.8232 7.73744 17.8232 8.03033 17.5303L6.96967 16.4697ZM13.0303 12.5303C13.3232 12.2374 13.3232 11.7626 13.0303 11.4697C12.7374 11.1768 12.2626 11.1768 11.9697 11.4697L13.0303 12.5303ZM11.9697 11.4697C11.6768 11.7626 11.6768 12.2374 11.9697 12.5303C12.2626 12.8232 12.7374 12.8232 13.0303 12.5303L11.9697 11.4697ZM18.0303 7.53033C18.3232 7.23744 18.3232 6.76256 18.0303 6.46967C17.7374 6.17678 17.2626 6.17678 16.9697 6.46967L18.0303 7.53033ZM13.0303 11.4697C12.7374 11.1768 12.2626 11.1768 11.9697 11.4697C11.6768 11.7626 11.6768 12.2374 11.9697 12.5303L13.0303 11.4697ZM16.9697 17.5303C17.2626 17.8232 17.7374 17.8232 18.0303 17.5303C18.3232 17.2374 18.3232 16.7626 18.0303 16.4697L16.9697 17.5303ZM11.9697 12.5303C12.2626 12.8232 12.7374 12.8232 13.0303 12.5303C13.3232 12.2374 13.3232 11.7626 13.0303 11.4697L11.9697 12.5303ZM8.03033 6.46967C7.73744 6.17678 7.26256 6.17678 6.96967 6.46967C6.67678 6.76256 6.67678 7.23744 6.96967 7.53033L8.03033 6.46967ZM8.03033 17.5303L13.0303 12.5303L11.9697 11.4697L6.96967 16.4697L8.03033 17.5303ZM13.0303 12.5303L18.0303 7.53033L16.9697 6.46967L11.9697 11.4697L13.0303 12.5303ZM11.9697 12.5303L16.9697 17.5303L18.0303 16.4697L13.0303 11.4697L11.9697 12.5303ZM13.0303 11.4697L8.03033 6.46967L6.96967 7.53033L11.9697 12.5303L13.0303 11.4697Z" fill="#000000" />
+          </svg>
+        </button>
+      </div>
+      <ol>
+        <li>
+          <a href="/index.html">
+            <span>
+              Home
+            </span>
+          </a>
+        </li>
+        <li>
+          <a href="/html/chapters.html">
+            <span>
+              Chapters
+            </span>
+          </a>
+        </li>
+        <li>
+          <a href="/index.html#quick-guide">
+            <span>
+              Quick guide
+            </span>
+          </a>
+        </li>
+        <div class="line"></div>
+        <li>
+          <a href="">
+            <span>
+              About
+            </span>
+          </a>
+        </li>
+        <li>
+          <a href="">
+            <span>
+              Contact
+            </span>
+          </a>
+        </li>
+        <li>
+          <a href="">
+            <span>
+              Buy me a coffee
+            </span>
+          </a>
+        </li>
+        <li>
+          <button onclick="showResetData()">
+            <span>
+              Reset all data
+            </span>
+          </button>
+        </li>
+        <li>
+          <label>
+            <input type="checkbox" onclick="showHideButton()" />
+            <span>
+              Hide button
+            </span>
+            <div></div>
+          </label>
+        </li>
+      </ol>
+      <span>
+        Page: <span>1</span>
+      </span>
+    </nav>
+  </aside>
+  
+  <main>
+    
+    <div id="prologue">
+      <div>
+        <div>
+          <h1>Prologue</h1>
+          <p>
+            They say memories shape who you are. But what happens when they’re taken away? <br /> <br />
+            A lost boy finds himself in a land unfamiliar to him, with no memories and no past, faced with questions and choices that will shape the end of his story. <br /> <br />
+            But far beyond, in a distant land unknown to everyone, a storm begins to rise.
+          </p>
+        </div>
+        <div>
+          <button id="prologue-continue-button" onclick="score = 1; showStory()"><span>Tap to continue</span></button>
+        </div>
+      </div>
+      <a href="/index.html" class="back-button">Home</a>
+    </div>
+    
+    <div id="chapters">
+      
+      <div id="chapter-one">
+        <div id="the-lost-boy">
+          <h1>
+            Chapter One: The Lost Boy
+          </h1>
+          <p>Near a calm river, a boy woke up, wounded, drenched, and trembling. His clothes were soaked, torn in places, and stained with dirt and blood. He tried to remember… anything. Who he was. What had happened. Where he was. But nothing came. <br /> <br />
+            
+            After a long silence, he pulled himself up and began to follow the path by the river. Every step hurt. His wound throbbed, and his body felt weak. He was hungry. He was thirsty. And he was lost. <br /> <br />
+            
+            After walking for some time, he saw two men riding toward him on horses. They wore armor. Soldiers, perhaps. The boy froze. <br /><br />
+            One of them asked, “Are you from Growlith?”
+          </p>
+          
+          <div id="TLB-cp-1" class="choice-panel">
+            <div class="button-row">
+              <label>
+                <input type="radio" name="choices" onchange="updateChoicePanel()">
+                <span>Yes</span>
+                <button onclick="ending = 'ending-1'; showEnding(); showStory()">
+                  Yes... I got lost on my way home. Can you help me?
+                </button>
+              </label>
+            </div>
+            <div class="button-row">
+              <label>
+                <input type="radio" name="choices" onchange="updateChoicePanel()">
+                <span>No</span>
+                <button onclick="score = 2; showStory()">
+                  No... I don’t remember anything. Can you help me?
+                </button>
+              </label>
+            </div>
+            <p>Tap again to confirm</p>
+            <button class="back-button" onclick="score = 0; showStory()">Back</button>
+          </div>
+          
+        </div>
+        <div id="pp">
+          <p id="cc">To be continued</p>
+          
+          <div id="TLB-cp-2" class="choice-panel">
+               
+            <button class="back-button" onclick="score = 1; showStory()">Back</button>
+          </div>
+        </div>
+      </div>
+      
+    </div>
+    
+   <div id="endings" class="popup-panel">
+        <div>
+          <h1>The End</h1>
+          <p id="ending-1" class="endings">
+            Their faces twitched in suspicion.
+            As they drew their swords, one of them shouted, “Are you t** ***?” <br /> <br />
+            
+            He couldn’t understand them.
+            He panicked and tried to run away.
+            But an arrow shot through his back, and he collapsed to the ground. <br /> <br />
+            
+            His vision blurred.
+            His hands clawed at the dirt.
+            What... just happened...? <br /> <br />
+            
+            
+            
+            His vision faded.
+            Everything went dark.
+          </p>
+          <p id="ending-2" class="endings">
+            Their faces twitched in suspicion.
+            As they drew their swords, one of them shouted, “Are you t** ***?” <br /> <br />
+          </p>
+          <div class="choice-panel">
+            <div class="button-row">
+              
+              <button onclick="hideEnding()">Retry</button>
+              <a href="/html/chapters.html">Chapters</a>
+            </div>
+            <div class="button-row">
+              <button onclick=" hideEnding(); showConfirmExit()">Home</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      
+    <div id="popups">
+      
+      <div id="hide-button" class="popup-panel">
+            <div>
+              <div class="popup-header">
+                <h1>Are you sure?</h1>
+              </div>
+              
+              <p>
+                Back button and menue button will no longer be visible, but they will remain clickable in their original positions. <br />
+                You can make them visible again by turning this option off.
+              </p>
+              <div class="choice-reminder">
+                <input type="checkbox" id="p">
+                <label for="p">remember my choice </label>
+              </div>
+              <div class="choice-panel">
+                <div class="button-row">
+                  
+                 <button onclick="closePopup()">
+                    Cancel </button>
+                 <button onclick="hideButton()">
+                    Hide
+                 </button>
+                </div>
+              </div>
+            </div>
+          </div>
+      
+      <div id="confirm-exit" class="popup-panel">
+        <div>
+          <div class="popup-header">
+            <h1>Are you sure?</h1>
+          </div>
+          <p>
+            Returning to the home page now will cause all progress to be lost. <br /> <br />
+            Tip: You can always retry and go to the home page from the side menu to prevent progress from being lost.
+          </p>
+          <div class="choice-panel">
+            <div class="button-row">
+              <button onclick="closePopup(); showEnding()">No</button>
+              <a onclick=" localStorage.setItem('page', 0)" href="/index.html">Yes</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div id="reset-data" class="popup-panel">
+            <div>
+              <div class="popup-header">
+                <h1>Are you sure?</h1>
+              </div>
+              
+              <p>
+                All data will be deleted permanently. This action cannot be undone, so proceed with caution. <br /> <br />
+                Tip: Read the quick guide before proceeding.
+              </p>
+              <div class="choice-panel">
+                <div class="button-row">
+                  
+                 <button onclick="closePopup()">
+                    Cancel </button>
+                 <button onclick="closePopup(); resetData()">
+                    Reset
+                 </button>
+                </div>
+              </div>
+            </div>
+          </div>
+      
+    </div>
+      
+      
+      
+   
+    
+  </main>
+  
+  <script src="/javascript/shared.js"></script>
+  
+  <script src="/javascript/story.js"></script>
+  
+</body>
+
+</html>

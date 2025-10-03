@@ -1,0 +1,208 @@
+body {
+  background: #f3f7fb;
+  color: #1b2a49;
+}
+
+section {
+  padding: 25px 20px 0 20px;
+} 
+
+h1 {
+  color: #12355b;
+  margin-bottom: 15px;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+}
+
+#custom-jump {
+  background: #ffffff;
+  border-radius: 0 0 10px 10px;
+  padding: 20px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.05);
+}
+
+#custom-jump div {
+  display: flex;
+  align-items: stretch;
+  gap: 10px;
+}
+
+#custom-jump label {
+  position: relative;
+  flex: 1;
+  display: flex;
+}
+
+#custom-jump input {
+  all: unset;
+  flex: 1;
+  border: 1px solid #a4c2f4;
+  background: #f9fbff;
+  border-radius: 6px;
+  padding: 8px;
+  font-size: 1rem;
+}
+
+#custom-jump .invalid-input {
+  border: 1px solid #f4a4a4;
+  background: #fff9f9;
+}
+
+#custom-jump span {
+  position: absolute;
+  left: 9px;
+  bottom: 9px;
+  color: #4a6fa1;
+  background: #f9fbff;
+  background: -webkit-linear-gradient(#f9fbff, #f9fbff);
+  background: -moz-linear-gradient(#f9fbff, #f9fbff);
+  background: -o-linear-gradient(#f9fbff, #f9fbff);
+  background: -ms-linear-gradient(#f9fbff, #f9fbff);
+  background: linear-gradient(#f9fbff, #f9fbff);
+  transition: 0.3s;
+}
+
+#custom-jump .invalid-input+span {
+  color: #ff0011;
+  background: #fff9f9;
+}
+
+#custom-jump input:focus+span,
+#custom-jump input:not(:placeholder-shown)+span {
+  color: #0077ff;
+  background: #f9fbff;
+  background: -webkit-linear-gradient(#f9fbff, #ffffff);
+  background: -moz-linear-gradient(#f9fbff, #ffffff);
+  background: -o-linear-gradient(#f9fbff, #ffffff);
+  background: -ms-linear-gradient(#f9fbff, #ffffff);
+  background: linear-gradient(#f9fbff, #ffffff);
+  font-size: 0.6rem;
+  bottom: -0.3rem;
+  left: 15px;
+  padding: 0 2px;
+}
+
+#custom-jump .invalid-input:focus+span,
+#custom-jump .invalid-input:not(:placeholder-shown)+span {
+  color: #ff0011;
+  background: #fff9f9;
+  background: -webkit-linear-gradient(#fff9f9, #ffffff);
+  background: -moz-linear-gradient(#fff9f9, #ffffff);
+  background: -o-linear-gradient(#fff9f9, #ffffff);
+  background: -ms-linear-gradient(#fff9f9, #ffffff);
+  background: linear-gradient(#fff9f9, #ffffff);
+}
+
+#custom-jump button {
+  padding: 0 10px;
+  background: #1e88e5;
+  background: -webkit-linear-gradient(135deg, #1e88e5, #1565c0);
+  background: -moz-linear-gradient(135deg, #1e88e5, #1565c0);
+  background: -o-linear-gradient(135deg, #1e88e5, #1565c0);
+  background: -ms-linear-gradient(135deg, #1e88e5, #1565c0);
+  background: linear-gradient(135deg, #1e88e5, #1565c0);
+  border-radius: 6px;
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+#custom-jump button:hover {
+  background: #42a5f5;
+  background: -webkit-linear-gradient(135deg, #42a5f5, #1e88e5);
+  background: -moz-linear-gradient(135deg, #42a5f5, #1e88e5);
+  background: -o-linear-gradient(135deg, #42a5f5, #1e88e5);
+  background: -ms-linear-gradient(135deg, #42a5f5, #1e88e5);
+  background: linear-gradient(135deg, #42a5f5, #1e88e5);
+}
+
+#chapters {
+  margin-top: 30px;
+}
+
+#chapters ol li {
+  margin-bottom: 15px;
+}
+
+#chapters label span {
+  background: linear-gradient(135deg, #2196f3, #1976d2);
+  display: flex;
+  align-content: center;
+  justify-content: space-between;
+  padding: 12px 25px;
+  border-radius: 8px;
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: white;
+  position: relative;
+  top: 0;
+  right: 0;
+  box-shadow: 0 4px 12px rgba(25, 118, 210, 0.3);
+  box-shadow: 0 0 0 #1976d2;
+  z-index: 1;
+  transition: all 0.3s ease;
+}
+
+#chapters label svg {
+  width: 20px;
+}
+
+#chapters label svg+svg {
+  display: none;
+}
+
+#chapters label input:checked+span {
+  top: -5px;
+  right: -5px;
+  box-shadow: 0 6px 14px rgba(25, 118, 210, 0.5);
+  box-shadow: -5px 5px 0 #1976d2;
+}
+
+#chapters label input:checked+span svg {
+  display: none;
+}
+
+#chapters label input:checked+span svg+svg {
+  display: block;
+}
+
+#chapters div {
+  overflow: hidden;
+  max-height: 0;
+  display: flex;
+  flex-direction: column-reverse;
+  position: relative;
+  top: -7px;
+  transition: max-height 0.5s ease;
+}
+
+#chapters div ul {
+  padding: 10px 15px;
+  padding-top: 20px;
+  background: #e3f2fd;
+  border-left: 3px solid #1976d2;
+  border: none;
+  border-radius: 0 0 6px 6px;
+}
+
+#chapters div ul li button {
+  display: block;
+  width: 100%;
+  padding: 6px 0;
+  color: #1565c0;
+  border-bottom: 1px solid #1565C078;
+  position: relative;
+  left: 0;
+  transition: 0.2s ease;
+}
+
+#chapters div ul li button:hover,
+#chapters div ul li button:active {
+  color: #0D47A1;
+  background: #1565C014;
+  position: relative;
+  left: -15px;
+  border-bottom: 1px solid #1565C0;
+  padding: 6px 15px;
+}

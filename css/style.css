@@ -1,0 +1,179 @@
+html {
+  scroll-behavior: smooth;
+}
+
+header {
+  justify-content: space-between;
+} 
+
+#hero {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: url(/images/river.png) center center / cover no-repeat;
+  box-shadow: 2px 2px 5px black;
+}
+
+#hero div {
+  flex: 1;
+  align-content: center;
+}
+
+#hero p {
+  font-family: pacifico;
+  font-size: 2.5rem;
+  line-height: 1.2;
+  font-weight: normal;
+  color: #1f3b1f;
+  z-index: 2;
+  position: relative;
+  background: #FFFFFF52;
+  width: max-content;
+  padding: 30px 30px 30px 20px;
+  border-radius: 0 15px 15px 0;
+  backdrop-filter: blur(1.5px);
+  -webkit-backdrop-filter: blur(1.5px);
+  margin-top: 70px;
+}
+
+#start {
+  padding: 8px 30px;
+  font-size: 1.5rem;
+  letter-spacing: 1px;
+  background: #7DC37D91;
+  color: #1f3b1f;
+  position: relative;
+  transition: 0.1s;
+  display: block;
+  width: min-content;
+  margin: 0 auto;
+}
+
+.bl,
+.al {
+  height: 1px;
+  width: 20px;
+  background: #CFCFCF;
+  position: absolute;
+}
+
+.al {
+  height: 15px;
+  width: 1px;
+}
+
+.bl1 {
+  top: -5px;
+  left: -5px;
+}
+
+.bl2 {
+  top: -5px;
+  right: -5px;
+}
+
+.bl3 {
+  bottom: -5px;
+  left: -5px;
+}
+
+.bl4 {
+  bottom: -5px;
+  right: -5px;
+}
+
+.bl5 {
+  top: -5px;
+  left: -5px;
+}
+
+.bl6 {
+  top: -5px;
+  right: -5px;
+}
+
+.bl7 {
+  bottom: -5px;
+  left: -5px;
+}
+
+.bl8 {
+  bottom: -5px;
+  right: -5px;
+}
+
+#start:active {
+  transform: scale(0.8);
+}
+
+#start:active .bl {
+  width: 90px;
+}
+
+#start:active .al {
+  height: 30px;
+}
+
+#quick-guide {
+  scroll-margin-top: 50px;
+}
+
+#quick-guide-top {
+  background: -webkit-linear-gradient(#F7F7F7, transparent);
+  background: -moz-linear-gradient(#F7F7F7, transparent);
+  background: -o-linear-gradient(#F7F7F7, transparent);
+  background: linear-gradient(#F7F7F7, transparent);
+  padding: 15px;
+  width: calc(100% - 30px);
+  margin: 60px auto 0 auto;
+  border-radius: 8px;
+}
+
+#quick-guide h1 {
+  margin: 20px 0 15px 0;
+}
+
+#quick-guide-img {
+  margin-top: 40px;
+  width: 100%;
+  height: calc((100vw - 60px) * (9/ 16));
+  overflow: hidden;
+}
+
+#quick-guide-img ol {
+  width: 100%;
+  overflow: scroll;
+  display: flex;
+  gap: 15px;
+  scroll-snap-type: x mandatory;
+  padding-bottom: 60px;
+}
+
+#quick-guide-img li {
+  width: calc(100% - 60px);
+  aspect-ratio: 16 / 9;
+  border-radius: 15px;
+  overflow: hidden;
+  flex-shrink: 0;
+  scroll-snap-align: center;
+  scroll-snap-stop: always;
+}
+
+#quick-guide-img li:first-child {
+  margin-left: 30px;
+}
+
+#quick-guide-img li:last-child {
+  margin-right: 30px;
+}
+
+#quick-guide-img img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+#quick-guide > p {
+  padding: 40px 30px;
+}
