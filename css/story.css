@@ -67,7 +67,7 @@ aside nav > span {
 
 main {
   padding: 50px 20px;
-  background: url('/images/page.png') top center / 100% auto repeat-y;
+  background: url('/images/page.jpg') top center / 100% auto repeat-y;
   min-height: 100vh;
 }
 
@@ -118,7 +118,7 @@ p {
   font-size: 1rem;
   letter-spacing: 0;
   transition: 0.1s;
-  background: url('/images/button.png') center center / 100% 100% no-repeat;
+  background: url('/images/button.jpg') center center / 100% 100% no-repeat;
   font-family: 'IM Fell English', serif;
 }
 
@@ -195,7 +195,7 @@ p {
   flex: 1;
   padding: 10px;
   text-align: center;
-  background: url(/images/choice.png) center center / cover no-repeat;
+  background: url(/images/choice.jpg) center center / cover no-repeat;
   color: black;
 }
 
@@ -242,7 +242,7 @@ p {
   height: min-content;
   padding: 30px 20px;
   border-radius: 7px;
-  background: url('/images/page.png') top center / 100% auto repeat-y;
+  background: url('/images/page.jpg') top center / 100% auto repeat-y;
   animation: endings-popup-animation 0.3s linear 1;
 }
 
