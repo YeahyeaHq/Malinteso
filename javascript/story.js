@@ -1,9 +1,13 @@
-let score = parseInt(localStorage.getItem("page"), 10) || 0;
 let ending = "";
 
 let popupButton = document.querySelector("aside input");
 
-function showStory() {
+const pageParents = {
+  1: 0,
+  2: 1
+}
+
+function showStory(score = parseInt(localStorage.getItem("page"), 10) || 0) {
   
   
   document.querySelector("nav>span span").textContent = score;
@@ -17,30 +21,36 @@ function showStory() {
   updateChoicePanel();
   
   if (score === 0) {
-    document.getElementById("prologue").style.display = "block";
+    document.getElementById("prologue").style.display = "flex";
   } else {
     document.getElementById("prologue").style.display = "none";
   }
   
-  if (score >= 1) {
-    document.getElementById("chapter-one").style.display = "block";
-  } else {
-    document.getElementById("chapter-one").style.display = "none";
+  const pages = document.querySelectorAll("#chapters > div > div");
+  const choicePanel = document.querySelectorAll("#chapters .choice-panel");
+  const visiblePages = new Set();
+  let current = score;
+  
+  
+  while (current !== 0) {
+    visiblePages.add(current);
+    current = pageParents[current];
   }
   
-  if (score === 1) {
-    document.getElementById("TLB-cp-1").style.display = "flex";
-  } else {
-    document.getElementById("TLB-cp-1").style.display = "none";
-  }
+  pages.forEach(page => {
+    const pageNumber = parseInt(page.id.replace("page-", ""));
+    if (visiblePages.has(pageNumber)) {
+      page.style.display = "block"
+    } else {
+      page.style.display = "none";
+    }
+  });
   
-  if (score === 2) {
-    document.getElementById("pp").style.display = "block";
-    document.getElementById("TLB-cp-2").style.display = "flex";
-  } else {
-    document.getElementById("TLB-cp-2").style.display = "none";
-    document.getElementById("pp").style.display = "none";
-  }
+  choicePanel.forEach(el => {
+    el.style.display = "none"
+  });
+  
+  document.querySelector(`#page-${score} .choice-panel`).style.display = "flex";
 }
 
 function updateChoicePanel() {
@@ -67,8 +77,6 @@ function showHideButton() {
 
 function hideButton() {
   let hideButton = document.querySelector("#hide-button button:last-child");
-  
-  
   
   if (popupButton.checked === false) {
     popupButton.checked = true;
@@ -111,21 +119,21 @@ function hideEnding() {
   document.getElementById("ending-1").style.display = "none";
   closePopup();
   document.querySelector("body").style.overflow = "";
+  document.querySelectorAll("main input").forEach(el => {
+    el.checked = false;
+  });
+  updateChoicePanel();
 }
 
 function showConfirmExit() {
   document.getElementById("confirm-exit").style.display = "flex";
 }
 
-function hideConfirmExit() {
-  document.getElementById("confirm-exit").style.display = "none";
-}
-
 function showResetData() {
   document.getElementById("reset-data").style.display = "flex";
 }
 
-function pp() {
+function buttonVisibility() {
   if (localStorage.getItem("hideButton") === "true") {
     popupButton.checked = true;
   } else {
@@ -163,5 +171,5 @@ function resetData() {
 
 window.onload = function() {
   showStory();
-  pp();
+  buttonVisibility();
 };

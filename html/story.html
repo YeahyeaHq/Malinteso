@@ -111,18 +111,16 @@
   <main>
     
     <div id="prologue">
+      <h1>Prologue</h1>
+      <p>
+        They say memories shape who you are. But what happens when they’re taken away? <br /> <br />
+        A lost boy finds himself in a land unfamiliar to him, with no memories and no past, faced with questions and choices that will shape the end of his story. <br /> <br />
+        But far beyond, in a distant land unknown to everyone, a storm begins to rise.
+      </p>
       <div>
-        <div>
-          <h1>Prologue</h1>
-          <p>
-            They say memories shape who you are. But what happens when they’re taken away? <br /> <br />
-            A lost boy finds himself in a land unfamiliar to him, with no memories and no past, faced with questions and choices that will shape the end of his story. <br /> <br />
-            But far beyond, in a distant land unknown to everyone, a storm begins to rise.
-          </p>
-        </div>
-        <div>
-          <button id="prologue-continue-button" onclick="score = 1; showStory()"><span>Tap to continue</span></button>
-        </div>
+        <button onclick="showStory(1)">
+          Tap to continue
+        </button>
       </div>
       <a href="/index.html" class="back-button">Home</a>
     </div>
@@ -130,7 +128,7 @@
     <div id="chapters">
       
       <div id="chapter-one">
-        <div id="the-lost-boy">
+        <div id="page-1">
           <h1>
             Chapter One: The Lost Boy
           </h1>
@@ -142,12 +140,12 @@
             One of them asked, “Are you from Growlith?”
           </p>
           
-          <div id="TLB-cp-1" class="choice-panel">
+          <div class="choice-panel">
             <div class="button-row">
               <label>
                 <input type="radio" name="choices" onchange="updateChoicePanel()">
                 <span>Yes</span>
-                <button onclick="ending = 'ending-1'; showEnding(); showStory()">
+                <button onclick="ending = 'ending-1'; showEnding()">
                   Yes... I got lost on my way home. Can you help me?
                 </button>
               </label>
@@ -156,94 +154,94 @@
               <label>
                 <input type="radio" name="choices" onchange="updateChoicePanel()">
                 <span>No</span>
-                <button onclick="score = 2; showStory()">
+                <button onclick="showStory(2)">
                   No... I don’t remember anything. Can you help me?
                 </button>
               </label>
             </div>
             <p>Tap again to confirm</p>
-            <button class="back-button" onclick="score = 0; showStory()">Back</button>
+            <button class="back-button" onclick="showStory(0)">Back</button>
           </div>
           
         </div>
-        <div id="pp">
+        <div id="page-2">
           <p id="cc">To be continued</p>
           
-          <div id="TLB-cp-2" class="choice-panel">
-               
-            <button class="back-button" onclick="score = 1; showStory()">Back</button>
+          <div class="choice-panel">
+            
+            <button class="back-button" onclick="showStory(1)">Back</button>
           </div>
         </div>
       </div>
       
     </div>
     
-   <div id="endings" class="popup-panel">
+    <div id="endings" class="popup-panel">
+      <div>
+        <h1>The End</h1>
+        <p id="ending-1" class="endings">
+          Their faces twitched in suspicion.
+          As they drew their swords, one of them shouted, “Are you t** ***?” <br /> <br />
+          
+          He couldn’t understand them.
+          He panicked and tried to run away.
+          But an arrow shot through his back, and he collapsed to the ground. <br /> <br />
+          
+          His vision blurred.
+          His hands clawed at the dirt.
+          What... just happened...? <br /> <br />
+          
+          
+          
+          His vision faded.
+          Everything went dark.
+        </p>
+        <p id="ending-2" class="endings">
+          Their faces twitched in suspicion.
+          As they drew their swords, one of them shouted, “Are you t** ***?” <br /> <br />
+        </p>
+        <div class="choice-panel">
+          <div class="button-row">
+            
+            <button onclick="hideEnding()">Retry</button>
+            <a href="/html/chapters.html">Chapters</a>
+          </div>
+          <div class="button-row">
+            <button onclick=" hideEnding(); showConfirmExit()">Home</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    
+    <div id="popups">
+      
+      <div id="hide-button" class="popup-panel">
         <div>
-          <h1>The End</h1>
-          <p id="ending-1" class="endings">
-            Their faces twitched in suspicion.
-            As they drew their swords, one of them shouted, “Are you t** ***?” <br /> <br />
-            
-            He couldn’t understand them.
-            He panicked and tried to run away.
-            But an arrow shot through his back, and he collapsed to the ground. <br /> <br />
-            
-            His vision blurred.
-            His hands clawed at the dirt.
-            What... just happened...? <br /> <br />
-            
-            
-            
-            His vision faded.
-            Everything went dark.
+          <div class="popup-header">
+            <h1>Are you sure?</h1>
+          </div>
+          
+          <p>
+            Back button and menue button will no longer be visible, but they will remain clickable in their original positions. <br />
+            You can make them visible again by turning this option off.
           </p>
-          <p id="ending-2" class="endings">
-            Their faces twitched in suspicion.
-            As they drew their swords, one of them shouted, “Are you t** ***?” <br /> <br />
-          </p>
+          <div class="choice-reminder">
+            <input type="checkbox" id="p">
+            <label for="p">remember my choice </label>
+          </div>
           <div class="choice-panel">
             <div class="button-row">
               
-              <button onclick="hideEnding()">Retry</button>
-              <a href="/html/chapters.html">Chapters</a>
-            </div>
-            <div class="button-row">
-              <button onclick=" hideEnding(); showConfirmExit()">Home</button>
+              <button onclick="closePopup()">
+                Cancel </button>
+              <button onclick="hideButton()">
+                Hide
+              </button>
             </div>
           </div>
         </div>
       </div>
-      
-      
-    <div id="popups">
-      
-      <div id="hide-button" class="popup-panel">
-            <div>
-              <div class="popup-header">
-                <h1>Are you sure?</h1>
-              </div>
-              
-              <p>
-                Back button and menue button will no longer be visible, but they will remain clickable in their original positions. <br />
-                You can make them visible again by turning this option off.
-              </p>
-              <div class="choice-reminder">
-                <input type="checkbox" id="p">
-                <label for="p">remember my choice </label>
-              </div>
-              <div class="choice-panel">
-                <div class="button-row">
-                  
-                 <button onclick="closePopup()">
-                    Cancel </button>
-                 <button onclick="hideButton()">
-                    Hide
-                 </button>
-                </div>
-              </div>
-            </div>
-          </div>
       
       <div id="confirm-exit" class="popup-panel">
         <div>
@@ -264,33 +262,29 @@
       </div>
       
       <div id="reset-data" class="popup-panel">
-            <div>
-              <div class="popup-header">
-                <h1>Are you sure?</h1>
-              </div>
+        <div>
+          <div class="popup-header">
+            <h1>Are you sure?</h1>
+          </div>
+          
+          <p>
+            All data will be deleted permanently. This action cannot be undone, so proceed with caution. <br /> <br />
+            Tip: Read the quick guide before proceeding.
+          </p>
+          <div class="choice-panel">
+            <div class="button-row">
               
-              <p>
-                All data will be deleted permanently. This action cannot be undone, so proceed with caution. <br /> <br />
-                Tip: Read the quick guide before proceeding.
-              </p>
-              <div class="choice-panel">
-                <div class="button-row">
-                  
-                 <button onclick="closePopup()">
-                    Cancel </button>
-                 <button onclick="closePopup(); resetData()">
-                    Reset
-                 </button>
-                </div>
-              </div>
+              <button onclick="closePopup()">
+                Cancel </button>
+              <button onclick="closePopup(); resetData()">
+                Reset
+              </button>
             </div>
           </div>
+        </div>
+      </div>
       
     </div>
-      
-      
-      
-   
     
   </main>
   

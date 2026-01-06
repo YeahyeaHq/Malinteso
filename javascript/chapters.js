@@ -40,4 +40,3 @@ function jumpViaButton() {
     
     window.location.href = "/html/story.html";
 }
-
